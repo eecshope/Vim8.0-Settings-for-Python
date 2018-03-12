@@ -89,8 +89,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'       " 让vundle管理插件版本,必须
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'maralla/completor.vim'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'            "Use F7
+Plugin 'python-mode/python-mode'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'Yggdroot/indentLine'
@@ -122,6 +121,9 @@ map <F5> :call RunPython()<CR>
 func! RunPython()
     exec "W"
     if &filetype == 'python'
-        exec "!time python2.7 %"
+        exec "!time python %"
     endif
 endfunc
+"map <F5> :w<cr>:!python %<cr> 
+-----------------------------Settings of python-mode------------------
+ let g:pymode_paths = ['/home/hope/anaconda3/envs/tensorflow/lib/python3.6/site-packages/tensorflow']
