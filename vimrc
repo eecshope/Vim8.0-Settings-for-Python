@@ -124,5 +124,5 @@ func! RunPython()
         exec "!time python %"
     endif
 endfunc
------------------------------Settings of python-mode------------------
+"-----------------------------Settings of python-mode------------------
  let g:pymode_paths = ['/home/hope/anaconda3/envs/tensorflow/lib/python3.6/site-packages/tensorflow']
